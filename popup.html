@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, sans-serif; width: 280px; padding: 20px; text-align: center; background-color: #202124; color: #e8eaed; margin: 0; }
+    h2 { font-size: 18px; margin-top: 0; margin-bottom: 5px; color: #ff4757; text-transform: uppercase; letter-spacing: 1px; }
+    .subtitle { font-size: 12px; color: #9aa0a6; margin-bottom: 20px; font-style: italic; }
+    .counter-box { background-color: #303134; color: #ffffff; border: 1px solid #5f6368; border-radius: 16px; padding: 20px; font-size: 38px; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3); margin-bottom: 20px; }
+    .stats-container { display: flex; justify-content: space-between; background-color: #292a2d; border-radius: 8px; padding: 12px; border: 1px solid #3c4043; margin-bottom: 20px;}
+    .stat-item { display: flex; flex-direction: column; text-align: center; width: 50%; }
+    .stat-label { font-size: 10px; color: #9aa0a6; text-transform: uppercase; letter-spacing: 0.5px; }
+    .stat-value { font-size: 15px; color: #e8eaed; font-weight: bold; margin-top: 5px; }
+    .divider { width: 1px; background-color: #3c4043; }
+    
+
+    #toggleBtn {
+      width: 100%; padding: 12px; border: none; border-radius: 8px; font-size: 14px; font-weight: bold; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; transition: 0.2s;
+    }
+  </style>
+</head>
+<body>
+  <h2>Slurs Censored</h2>
+  <div class="subtitle">Successfully removed from your screen</div>
+
+  <div class="counter-box" id="countDisplay">0</div>
+
+  <div class="stats-container">
+    <div class="stat-item">
+      <span class="stat-label">Worst Offender</span>
+      <span class="stat-value" id="topWord">None</span>
+    </div>
+    <div class="divider"></div>
+    <div class="stat-item">
+      <span class="stat-label">Times Blocked</span>
+      <span class="stat-value" id="topCount">0</span>
+    </div>
+  </div>
+
+  <button id="toggleBtn">CENSORING IS ON</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
